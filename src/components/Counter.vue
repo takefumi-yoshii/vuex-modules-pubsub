@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="counter">
     <h3>{{name}}</h3>
     <p>count: {{count}}</p>
     <div>
@@ -26,3 +26,9 @@ const methods = {
 
 export default Vue.extend({ computed, methods });
 </script>
+
+<style scoped>
+.counter {
+  flex: 1 0 auto;
+}
+</style>
