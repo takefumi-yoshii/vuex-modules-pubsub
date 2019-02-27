@@ -13,11 +13,13 @@ const namespace = 'subscriber1'
 
 interface State {
   name: string
-  mappedCount: number
+  counterCount: number
+  doneTodos: boolean
 }
 const state = {
   name: '',
-  mappedCount: 0,
+  counterCount: 0,
+  doneTodos: false
 }
 const stateFactory: StateFactory<State> = injects => ({ ...state, ...injects })
 const { mapState } = fromState(state, namespace)
@@ -26,8 +28,11 @@ const { mapState } = fromState(state, namespace)
 // @ Mutations
 
 const mutations = {
-  mapCount(state: State, count: number): void {
-    state.mappedCount = count
+  mapCounterCount(state: State, count: number): void {
+    state.counterCount = count
+  },
+  mapTodosDone(state: State, done: boolean): void {
+    state.doneTodos = done
   }
 }
 const { commits } = fromMutations(

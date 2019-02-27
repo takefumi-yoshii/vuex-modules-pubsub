@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div class="container">
     <h3>{{name}}</h3>
-    count: {{mappedCount}}
+    <p>counterCount: {{counterCount}}</p>
+    <p v-if="doneTodos">todos done!</p>
   </div>
 </template>
 
@@ -10,8 +11,14 @@ import Vue from "vue";
 import { mapState } from '../stores/modules/subscriber1'
 
 const computed = {
-  ...mapState(['name', 'mappedCount'])
+  ...mapState(['name', 'counterCount', 'doneTodos'])
 }
 
 export default Vue.extend({ computed });
 </script>
+
+<style scoped>
+.container {
+  flex: 1 0 auto;
+}
+</style>

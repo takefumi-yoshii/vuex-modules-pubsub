@@ -48,7 +48,7 @@ const _getters = {
     return state.todos.length
   },
   doneAll(state: State): boolean {
-    return state.todos.filter(todo => !todo.done) === undefined
+    return state.todos.filter(todo => !todo.done).length === 0
   }
 }
 const { getters, mapGetters } = fromGetters(_getters, namespace)

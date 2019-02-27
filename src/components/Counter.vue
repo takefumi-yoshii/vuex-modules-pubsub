@@ -30,5 +30,7 @@ export default Vue.extend({ computed, methods });
 <style scoped>
 .counter {
   flex: 1 0 auto;
+  margin-right: 12px;
+  border-right: 1px solid #666;
 }
 </style>

@@ -5,6 +5,7 @@
       <input type="text" v-model="inputValue" />
       <button>add Todo</button>
     </form>
+    <hr />
     <div>
       toggle visible done todos: <input type="checkbox" v-model="visibleDoneTodos" />
     </div>
@@ -58,9 +59,6 @@ export default Vue.extend({
 .list {
   padding: 0;
 }
-</style>
-
-<style scoped>
 .todos {
   flex: 1 0 auto;
 }
